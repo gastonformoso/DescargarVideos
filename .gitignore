@@ -1,0 +1,15 @@
+node_modules/
+dist/
+dist-ssr/
+.vite/
+
+src-tauri/target/
+src-tauri/gen/
+src-tauri/resources/bin/*
+!src-tauri/resources/bin/.gitkeep
+
+.env
+.env.local
+*.local
+.DS_Store
+Thumbs.db

@@ -1,0 +1,54 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Video Downloader",
+  "version": "0.1.0",
+  "identifier": "com.videodownloader.app",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://127.0.0.1:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "Video Downloader",
+        "width": 1280,
+        "height": 840,
+        "minWidth": 1024,
+        "minHeight": 680,
+        "center": true,
+        "resizable": true,
+        "fullscreen": false,
+        "theme": "Dark"
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis"],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "resources": ["resources/bin/*"],
+    "copyright": "Copyright © 2026 Video Downloader",
+    "category": "Utility",
+    "shortDescription": "Descarga videos de YouTube, TikTok y X en tu PC.",
+    "longDescription": "Video Downloader es una aplicación de escritorio local que permite analizar y descargar videos de YouTube, TikTok y X (Twitter) con yt-dlp y FFmpeg, gestionar una cola de descargas y conservar un historial.",
+    "windows": {
+      "nsis": {
+        "installMode": "currentUser",
+        "languages": ["Spanish", "English"],
+        "displayLanguageSelector": false
+      }
+    }
+  }
+}
